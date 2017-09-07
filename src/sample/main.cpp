@@ -94,14 +94,18 @@ TEST(SummizerTestGlobal3, CanSumGlobal3)
 
 TEST(SummizerTestGlobal2, CanSumGlobal2)
 {
-    EXPECT_GLOBAL_CALL(sum2, sum2(1, 2)) .Times(1);
+    EXPECT_GLOBAL_CALL(sum2, sum2(1, 2)).Times(1);
+    EXPECT_GLOBAL_CALL(sum2, sum2(3, 4)).Times(1);
     sum2(1, 2);
+    sum2(3, 4);
 }
 
 TEST(SummizerTestGlobal1, CanSumGlobal1)
 {
     EXPECT_GLOBAL_CALL(sum1, sum1(1)).Times(1);
+    EXPECT_GLOBAL_CALL(sum1, sum1(2)).Times(1);
     sum1(1);
+    sum1(2);
 }
 
 TEST(SummizerTestGlobal0, CanSumGlobal0)
