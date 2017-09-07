@@ -1,6 +1,3 @@
-[submodule "src/3d-party/gmockglobal"]
-	path = src/3d-party/gmockglobal
-	url = https://github.com/apriorit/gmockglobal.git
 [submodule "src/3rd-party/gmockglobal"]
 	path = src/3rd-party/gmockglobal
 	url = https://github.com/apriorit/gmockglobal.git
