@@ -1,6 +1,6 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
-#include <gmockglobal/gmockglobal.h>
+#include <gmock-global/gmock-global.h>
 
 // 
 //  Mocks for test sum functions

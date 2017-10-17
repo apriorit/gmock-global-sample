@@ -1,6 +1,6 @@
-[submodule "src/3rd-party/gmockglobal"]
-	path = src/3rd-party/gmockglobal
-	url = https://github.com/apriorit/gmockglobal.git
+[submodule "src/3rd-party/gmock-global"]
+	path = src/3rd-party/gmock-global
+	url = https://github.com/apriorit/gmock-global.git
 [submodule "src/3rd-party/googletest"]
 	path = src/3rd-party/googletest
 	url = https://github.com/google/googletest.git
