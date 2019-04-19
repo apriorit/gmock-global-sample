@@ -5,6 +5,16 @@
 // 
 //  Mocks for test sum functions
 //
+MOCK_GLOBAL_FUNC15(sum15, int(int, int, int, int, int, int, int, int, int, int, int, int, int, int, int));
+
+MOCK_GLOBAL_FUNC14(sum14, int(int, int, int, int, int, int, int, int, int, int, int, int, int, int));
+
+MOCK_GLOBAL_FUNC13(sum13, int(int, int, int, int, int, int, int, int, int, int, int, int, int));
+
+MOCK_GLOBAL_FUNC12(sum12, int(int, int, int, int, int, int, int, int, int, int, int, int));
+
+MOCK_GLOBAL_FUNC11(sum11, int(int, int, int, int, int, int, int, int, int, int, int));
+
 MOCK_GLOBAL_FUNC10(sum10, int(int, int, int, int, int, int, int, int, int, int));
 
 MOCK_GLOBAL_FUNC9(sum9, int(int, int, int, int, int, int, int, int, int));
@@ -42,6 +52,36 @@ TEST(SeveralSumsInOne, CanSumSeveral)
     EXPECT_GLOBAL_CALL(sum3, sum3(1, 2, 3)).Times(2);
     sum3(1, 2, 3);
     sum3(1, 2, 3);
+}
+
+TEST(SummizerTestGlobal15, CanSumGlobal15)
+{
+    EXPECT_GLOBAL_CALL(sum15, sum15(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)).Times(1);
+    sum15(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+}
+
+TEST(SummizerTestGlobal14, CanSumGlobal14)
+{
+    EXPECT_GLOBAL_CALL(sum14, sum14(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)).Times(1);
+    sum14(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);
+}
+
+TEST(SummizerTestGlobal13, CanSumGlobal13)
+{
+    EXPECT_GLOBAL_CALL(sum13, sum13(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)).Times(1);
+    sum13(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+}
+
+TEST(SummizerTestGlobal12, CanSumGlobal12)
+{
+    EXPECT_GLOBAL_CALL(sum12, sum12(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)).Times(1);
+    sum12(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+}
+
+TEST(SummizerTestGlobal11, CanSumGlobal11)
+{
+    EXPECT_GLOBAL_CALL(sum11, sum11(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)).Times(1);
+    sum11(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
 }
 
 TEST(SummizerTestGlobal10, CanSumGlobal10)
