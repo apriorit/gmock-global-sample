@@ -165,3 +165,8 @@ TEST(SummizerTestGlobal1, CanSumGlobal1WithOnCall)
     ASSERT_EQ(sum1(0), 42);
     ASSERT_EQ(sum1(1), 42);
 }
+
+TEST(SummizerTestGlobal1, ExceptionOnCallWithoutExpect)
+{
+    ASSERT_ANY_THROW(sum1(0));
+}
