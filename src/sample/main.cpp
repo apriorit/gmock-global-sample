@@ -2,6 +2,8 @@
 #include <gtest/gtest.h>
 #include <gmock-global/gmock-global.h>
 
+using namespace testing;
+
 // 
 //  Mocks for test sum functions
 //
@@ -152,4 +154,14 @@ TEST(SummizerTestGlobal0, CanSumGlobal0)
 {
     EXPECT_GLOBAL_CALL(sum0, sum0()).Times(1);
     sum0();
+}
+
+TEST(SummizerTestGlobal1, CanSumGlobal1WithOnCall)
+{
+    ON_GLOBAL_CALL(sum1, sum1(_)).WillByDefault(Return(42));
+    EXPECT_GLOBAL_CALL(sum1, sum1(0)).Times(1);
+    EXPECT_GLOBAL_CALL(sum1, sum1(1)).Times(1);
+
+    ASSERT_EQ(sum1(0), 42);
+    ASSERT_EQ(sum1(1), 42);
 }
